@@ -20,9 +20,8 @@ class UserService {
 
   login = (email, password) => {
     const user = this.users.find((u) => u.email === email);
-    if (user.password !== password) {
-      throw new Error('Wrong password');
-    }
+    if (!user) throw new Error('Wrong email');
+    if (user.password !== password) throw new Error('Wrong password');
     user.lastLogin = new Date();
     return user;
   };
