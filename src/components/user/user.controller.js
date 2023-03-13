@@ -16,6 +16,11 @@ class UserController {
     const { id } = req.params;
     return res.status(200).send(this.userService.getUser(id));
   };
+
+  login = (req, res) => {
+    const { email, password } = req.body;
+    return res.status(200).send(this.userService.login(email, password));
+  };
 }
 
 export default UserController;

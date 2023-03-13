@@ -10,6 +10,7 @@ class UserRouter {
     router.route('/:id').get(this.userController.getUser);
     router.route('/').get(this.userController.getUsers);
     router.route('/').post(this.userController.createUser);
+    router.route('/login').post(this.userController.login);
     return router;
   }
 }
