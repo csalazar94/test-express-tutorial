@@ -1,8 +1,12 @@
 {
     "env": {
+        "jest/globals": true,
         "browser": true,
         "es2021": true
     },
+    "plugins": [
+        "jest"
+    ],
     "extends": "airbnb-base",
     "parserOptions": {
         "ecmaVersion": "latest",
